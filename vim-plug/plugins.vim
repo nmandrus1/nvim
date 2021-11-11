@@ -34,5 +34,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 " Which Key
 Plug 'liuchengxu/vim-which-key'
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 call plug#end()

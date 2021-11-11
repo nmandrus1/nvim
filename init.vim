@@ -9,5 +9,6 @@ source $HOME/.config/nvim/keys/which-key.vim
 " Lua
 source $HOME/.config/nvim/plug-config/compe-config.lua
 source $HOME/.config/nvim/plug-config/rust-tools.lua
-source $HOME/.config/nvim/plug-config/python-lsp.lua
+source $HOME/.config/nvim/plug-config/lsps.lua
 source $HOME/.config/nvim/plug-config/nvim-tree.lua
+source $HOME/.config/nvim/plug-config/treesitter.lua
