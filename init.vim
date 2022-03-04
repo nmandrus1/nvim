@@ -12,3 +12,4 @@ source $HOME/.config/nvim/plug-config/rust-tools.lua
 source $HOME/.config/nvim/plug-config/lsps.lua
 source $HOME/.config/nvim/plug-config/nvim-tree.lua
 source $HOME/.config/nvim/plug-config/treesitter.lua
+source $HOME/.config/nvim/plug-config/telescope.lua

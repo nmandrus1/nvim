@@ -26,9 +26,9 @@ Plug 'saadparwaiz1/cmp_luasnip'
 "Plugin for rust development
 Plug 'simrat39/rust-tools.nvim'
 " Dependencies
-Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-ui-select.nvim'
 " Theme
 Plug 'joshdick/onedark.vim'
 " File Tree
