@@ -93,6 +93,15 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 
+  -- Buffer Tabs
+  use "akinsho/bufferline.nvim"
+
+  -- Status Line
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
   -- Automatically setup configs after bootstrapping packer
   if packer_bootstrap then
     require("packer").sync()
