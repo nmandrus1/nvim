@@ -6,7 +6,9 @@ end
 local actions = require "telescope.actions"
 
 telescope.setup {
+
   defaults = {
+    initial_mode = "normal",
     layout_config = {
       horizontal = {
         width = 0.9,
@@ -99,5 +101,13 @@ telescope.setup {
     --   extension_config_key = value,
     -- }
     -- please take a look at the readme of the extension you want to configure
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+        -- even more opts
+      }
+    },
   },
 }
+
+-- load extension(s)
+require("telescope").load_extension("ui-select")

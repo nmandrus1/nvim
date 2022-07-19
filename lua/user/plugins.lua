@@ -4,11 +4,11 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({
-    'git', 
-    'clone', 
-    '--depth', 
-    '1', 
-    'https://github.com/wbthomason/packer.nvim', 
+    'git',
+    'clone',
+    '--depth',
+    '1',
+    'https://github.com/wbthomason/packer.nvim',
     install_path
   })
   print "Installing packer close and reopen neovim..."
@@ -60,7 +60,12 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig"       -- enable LSP
-  -- use "simrat39/rust-tools.nvim"    -- rust lsp 
+  use "williamboman/nvim-lsp-installer"
+
+  -- rust
+  use "simrat39/rust-tools.nvim"
+  -- java
+  use "mfussenegger/nvim-jdtls"
 
   -- Snippets
   use "L3MON4D3/LuaSnip"            -- Snippet Engine
@@ -86,6 +91,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-ui-select.nvim"
 
   -- Treesitter
   use {
@@ -101,6 +107,8 @@ return packer.startup(function(use)
   'nvim-lualine/lualine.nvim',
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+
+  use "folke/which-key.nvim"
 
   -- Automatically setup configs after bootstrapping packer
   if packer_bootstrap then
