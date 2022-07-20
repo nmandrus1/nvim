@@ -70,8 +70,8 @@ wk.setup(opts)
 local keymap = {
   ["e"] = { "<cmd>NvimTreeToggle<CR>",               "Open File Browser" },
   ["f"] = { "<cmd>Telescope find_files<CR>",         "Find Files" },
-  ["K"] = { "<cmd>lu vim.lsp.buf.hover()<CR>",      "Hover (K)" },
-  ["v"] = { "<cmd>vsplit",                           "split vertical" },
+  ["K"] = { "<cmd>lua vim.lsp.buf.hover()<CR>",      "Hover (K)" },
+  ["v"] = { "<cmd>vsplit<CR>",                       "split vertical" },
 
   b = {
     name = "Buffer",
