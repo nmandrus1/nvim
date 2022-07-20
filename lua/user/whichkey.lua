@@ -38,7 +38,7 @@ local opts = {
     scroll_up = '<c-u>', -- binding to scroll up inside the popup
   },
   window = {
-    border = "single", -- none, single, double, shadow
+    border = "rounded", -- none, single, double, shadow, rounded
     position = "bottom", -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
@@ -70,7 +70,8 @@ wk.setup(opts)
 local keymap = {
   ["e"] = { "<cmd>NvimTreeToggle<CR>",               "Open File Browser" },
   ["f"] = { "<cmd>Telescope find_files<CR>",         "Find Files" },
-  ["K"] = { "<cmd>lua vim.lsp.buf.hover()<CR>",      "Hover (K)" },
+  ["K"] = { "<cmd>lu vim.lsp.buf.hover()<CR>",      "Hover (K)" },
+  ["v"] = { "<cmd>vsplit",                           "split vertical" },
 
   b = {
     name = "Buffer",
@@ -82,16 +83,16 @@ local keymap = {
   g = {
     name = "Goto",
     r = { "<cmd>Telescope lsp_references<CR>",                              "References (gr)" },
-    d = { "<cmd>lua vim.lsp.buf.definintion()<CR>",    	                        "Definition (gd)" },
-    D = { "<cmd>lua vim.lsp.buf.declaration()<CR>",    	                        "Declaration (gD)" },
-    i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", 	                        "Implementation (gi)" },
+    d = { "<cmd>lua vim.lsp.buf.definintion()<CR>",                         "Definition (gd)" },
+    D = { "<cmd>lua vim.lsp.buf.declaration()<CR>",                         "Declaration (gD)" },
+    i = { "<cmd>lua vim.lsp.buf.implementation()<CR>",                      "Implementation (gi)" },
     p = { "<cmd>lua vim.diagnostic.goto_prev({ border = 'rounded' })<CR>",  "Prev Diagnostic (CTL-p)" },
     n = { "<cmd>lua vim.diagnostic.goto_next({ border = 'rounded' })<CR>",  "Next Diagnostic (CTL-n)" },
     l = { "<cmd>Telescope diagnostics<CR>",                                 "List Diagnostics (SPC-q)" },
   },
 }
 
-wk.register(keymap, { mode = "n", prefix = "<leader>" })
+wk.register(keymap,     { mode = "n", prefix = "<leader>", noremap = true, silent = true })
 
 local function code_keymap()
   if vim.fn.has "nvim-0.7" then
