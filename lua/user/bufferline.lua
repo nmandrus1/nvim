@@ -1,4 +1,10 @@
-require('bufferline').setup {
+local ok, bufferline = pcall(require, "bufferline")
+
+if not ok then
+  return
+end
+
+bufferline.setup {
   options = {
     mode = "buffers", -- set to "tabs" to only show tabpages instead
     numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
@@ -53,7 +59,7 @@ require('bufferline').setup {
     --     return true
     --   end
     -- end,
-    offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "center" }}, 
+    offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "center" }},
     color_icons = true, -- | false, -- whether or not to add the filetype icon highlights
     show_buffer_icons = true, -- | false, -- disable filetype icons for buffers
     show_buffer_close_icons = true, -- | false,
@@ -66,7 +72,7 @@ require('bufferline').setup {
     separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
     enforce_regular_tabs = false, -- | true,
     always_show_bufferline = true, -- | false,
-    sort_by = 'insert_at_end', 
+    sort_by = 'insert_at_end',
   },
 }
 

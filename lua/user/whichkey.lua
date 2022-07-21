@@ -1,3 +1,9 @@
+local ok, wk = pcall(require, "which-key")
+
+if not ok then
+  return
+end
+
 local opts = {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -64,7 +70,6 @@ local opts = {
   },
 }
 
-local wk = require("which-key")
 wk.setup(opts)
 
 local keymap = {
