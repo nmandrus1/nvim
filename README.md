@@ -10,6 +10,7 @@ Clone the repository into your `~/.config/nvim/`
 
 `$ git clone https://github.com/nmandrus1/nvim.git ~/.config/nvim`
 
-open neovim and it should automatically install the plugins, if not run 
+open neovim and it will automatically install the plugins giving an 
+error with 'nvim-treesitter', don't worry just restart neovim and it will work just fine
 
 `:PackerSync`
