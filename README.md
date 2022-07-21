@@ -1,7 +1,7 @@
 # nvim
 My nvim config for rust development mainly
 
-Dependencies: lua, npm, neovim >= 0.6, and any LSP binaries you need
+Dependencies: lua, npm, neovim >= 0.7
 
 # Installation
 Back up your current neovim configuraton
@@ -10,10 +10,6 @@ Clone the repository into your `~/.config/nvim/`
 
 `$ git clone https://github.com/nmandrus1/nvim.git ~/.config/nvim`
 
-open neovim and this the ':' to type "PlugInstall"
+open neovim and it should automatically install the plugins, if not run 
 
-`:PlugInstall`
-
-Restart neovim and then install any TreeSitter parsers you want, for rust
-
-`:TSInstall rust`
+`:PackerSync`
